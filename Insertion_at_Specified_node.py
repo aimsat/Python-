@@ -31,10 +31,9 @@ class linkedlist:
             a=a.ref
         a.ref=ne
 
-    def Ins_Specified_Node(self,data):
+    def Ins_Specified_Node(self,position,data):
         ns=Node(data)
         a=self.head
-        position=3
         for i in range(1, (position-1)):
             a=a.ref
         ns.ref= a.ref
@@ -53,7 +52,7 @@ n3.ref=n4
 
 
 ll.InsertBegin(0)
-ll.Ins_Specified_Node(15)
+ll.Ins_Specified_Node(3,15)
 ll.Insertion_at_End(50)
 ll.Insertion_at_End(60)
 
