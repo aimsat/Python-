@@ -1,0 +1,34 @@
+import random
+import math
+
+lower=int(input("Enter Lower Bound: "))
+upper=int(input("Enter Upper Bound: "))
+
+x=random.randint(lower, upper)
+
+max_guess=round(math.log(upper-lower+1,2))
+
+print("you have only", max_guess, "number of guesses. Good Luck")
+
+i=1
+
+while i<=max_guess:
+    g=int(input("Enter Your Guessed Number: "))
+    i=i+1
+
+    if g==x:
+        print("Congrats! You Guessed number Right in chance", i-1)
+        break
+
+    elif g>=x:
+        print("Sorry Your Guessed Number is too high! try again..")
+
+
+    elif g<=x:
+        print("Sorry Your Guessed Number is too Low! try again..")
+
+
+
+if i>max_guess:
+    print("\nThe number is %d" % x)
+    print("Better Luck Next time!")
